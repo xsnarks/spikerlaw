@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: spikerlaw.com
+Token: 1cc5398bfdd0156829efe022f580a7e9819070e142de63ddf2cd5a2d916e1365
