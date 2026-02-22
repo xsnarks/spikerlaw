@@ -38,15 +38,22 @@
 
       <![endif]--> 
 
-      /* images */
-	  <style>
+     /* images */
+<style>
   .rachel-photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;           /* 1 column by default (mobile-first) */
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
+  }
+
+  /* Switch to 2 columns on tablets and larger */
+  @media (min-width: 768px) {
+    .rachel-photo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .rachel-photo-card {
@@ -64,7 +71,7 @@
   .rachel-photo-card img {
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 5;   /* nice portrait ratio — change to 16/9 or 1/1 if your photos are landscape/square */
+    aspect-ratio: 4 / 5;
     object-fit: cover;
     display: block;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,7 +87,7 @@
       gap: 1.5rem;
     }
     .rachel-photo-card img {
-      aspect-ratio: 1 / 1;   /* square on very small screens for better mobile balance */
+      aspect-ratio: 1 / 1;
     }
   }
 </style>
@@ -184,26 +191,24 @@
                <p class="s-12 l-8 center" style="padding-bottom:10px;">Outside of the office, Rachel volunteers with local animal rescues, working to improve animal welfare. She’s discovered a passion for photographing adoptable dogs, in the hopes of helping them find loving families.</p>
 
                 <section style="padding: 5rem 0; background: #f9fafb;">
-  
-				<div class="rachel-photo-grid">
-					<div class="rachel-photo-card">
-						<img src="img/rachel-spiker-hessenauer-1.jpg" alt="Rachel B. Spiker Hessenauer" loading="lazy">
-					</div>
+  					<div class="rachel-photo-grid">
+    					<div class="rachel-photo-card">
+      						<img src="img/rachel-spiker-hessenauer-1.jpg" alt="Rachel B. Spiker Hessenauer" loading="lazy">
+    					</div>
     
-				<div class="rachel-photo-card">
-					<img src="img/rachel-spiker-hessenauer-2.jpg" alt="Rachel B. Spiker Hessenauer" loading="lazy">
-				</div>
+    					<div class="rachel-photo-card">
+      						<img src="img/rachel-spiker-hessenauer-2.jpg" alt="Rachel B. Spiker Hessenauer" loading="lazy">
+    					</div>
     
-				<div class="rachel-photo-card">
-					<img src="img/rachel-spiker-hessenauer-3.jpg" alt="Rachel B. Spiker Hessenauer" loading="lazy">
-				</div>
+    					<div class="rachel-photo-card">
+      						<img src="img/rachel-spiker-hessenauer-3.jpg" alt="Rachel B. Spiker Hessenauer" loading="lazy">
+    					</div>
     
-				<div class="rachel-photo-card">
-					<img src="img/rachel-spiker-hessenauer-4.jpg" alt="Rachel B. Spiker Hessenauer" loading="lazy">
-				</div>
-			</div>
-
-			</section>
+    					<div class="rachel-photo-card">
+      						<img src="img/rachel-spiker-hessenauer-4.jpg" alt="Rachel B. Spiker Hessenauer" loading="lazy">
+    					</div>
+  					</div>
+				</section>
                
             </div>
 
@@ -307,6 +312,7 @@ and does not constitute an agreement to enter into such a contract.
 
 
 </html>
+
 
 
 
